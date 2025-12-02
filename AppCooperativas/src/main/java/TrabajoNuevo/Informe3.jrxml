@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f7fe01a3-9963-40a7-9028-74002a472913">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+        <parameter name="minimo" class="java.lang.Double"/>
+        <parameter name="maximo" class="java.lang.Double"/>
+	<queryString>
+    <![CDATA[
+        SELECT *
+        FROM Cooperativa
+        WHERE kgtotales BETWEEN $P{minimo} AND $P{maximo}
+    ]]>
+</queryString>
+
+	<field name="idCooperativa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Ciudad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Horario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KgTotales" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="79" uuid="e05c685b-b7c8-471e-afb5-9ab5111afb7b"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AppCooperativa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="48" width="100" height="20" uuid="d58e1243-cd4d-44ec-abf9-82e8a55b8133"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Lista filtros]]></text>
+			</staticText>
+			<image>
+				<reportElement x="430" y="12" width="108" height="67" uuid="8ec81f31-3502-462b-86df-2a3b3fe84d0e"/>
+				<imageExpression><![CDATA["C:\\Users\\anton\\Downloads\\crud_javafx_libros_v2\\AppCooperativas\\src\\main\\java\\TrabajoNuevo\\CoopImgJpg.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="38" y="2" width="100" height="20" uuid="fd2e33b7-9341-4fcc-8b7a-16a1c56d15b0"/>
+				<text><![CDATA[idCooperativa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="2" width="100" height="20" uuid="1fd88dee-8b69-471c-8d13-272567f84292"/>
+				<text><![CDATA[Ciudad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="2" width="100" height="20" uuid="384fc61b-c0fd-42b9-93d5-9a30b7f6260c"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="0" width="100" height="20" uuid="04096d92-5302-4d18-ab45-4f6548d00f5a"/>
+				<text><![CDATA[Horario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="2" width="100" height="20" uuid="6aca2f3d-0781-4684-93f5-717e79f8fa92"/>
+				<text><![CDATA[KgTotales]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="38" y="0" width="100" height="20" uuid="ea76d44e-fef4-49f8-bbb7-8c275bd55bfe"/>
+				<textFieldExpression><![CDATA[$F{idCooperativa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="0" width="100" height="20" uuid="8fc5058a-3222-4a7f-8199-d658fb32d64f"/>
+				<textFieldExpression><![CDATA[$F{Ciudad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="238" y="0" width="100" height="20" uuid="452f4382-5808-40f9-a534-ec144a6e89cc"/>
+				<textFieldExpression><![CDATA[$F{Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="338" y="0" width="100" height="20" uuid="b31f2af1-1851-4dec-a8c9-39b1280e8fb3"/>
+				<textFieldExpression><![CDATA[$F{Horario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="438" y="0" width="100" height="20" uuid="4e06b72c-3bab-4bd9-ab3a-34d649318d3f"/>
+				<textFieldExpression><![CDATA[$F{KgTotales}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="34" width="100" height="20" uuid="3b5e0aa4-21e0-4080-b308-baa092abad88"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

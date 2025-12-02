@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="manual.css">
+    <title>Manual</title>
+</head>
+<body>
+    <div class="portada">
+        <h1>Manual de uso de la APP</h1>
+        <h2>Antonio Quirós García 2ºDAM B</h2>
+    </div>
+
+    <div class="indice">
+        <h2>Índice</h2>
+        <ul>
+            <li><a href="#objetivos">1. Objetivos</a></li>
+            <li><a href="#contenidos">2. Contenidos</a></li>
+            <li><a href="#funcionamientos">3. Funcionamiento</a></li>
+                <ol>
+                    <li><a href="#pestaniaCoop">3.1 Pestaña Cooperativa</a></li>
+                        <ol>
+                            <li><a href="#aniadirCoop">3.1.1 Añadir Cooperativa</a></li>
+                            <li><a href="#borrarCoop">3.1.2 Eliminar Cooperativa</a></li>
+                            <li><a href="#actuCoop">3.1.3 Actualizar Cooperativa</a></li>
+                            <li><a href="#informe">3.1.4 Informe</a></li>
+                        </ol>
+                </ol>
+                <ol>
+                    <li><a href="#pestañaCliente">3.2 Pestaña Cliente</a></li>
+                        <ol>
+                            <li><a href="#aniadirClient">3.2.1 Añadir Cliente</a></li>
+                            <li><a href="#borrarClient">3.2.2 Eliminar Cliente</a></li>
+                            <li><a href="#actCliente">3.2.3Actualizar Cliente</a></li>
+                        </ol>
+                </ol>
+                <ol>
+                    <li><a href="#PestaniaConsulta">3.3 Pestaña Consultas</a></li>
+                    <ol>
+                        <li><a href="#agregarKg">3.3.1 Agregarkg</a></li>
+                        <li><a href="#consultarCliente">3.3.2 Consultar Cliente</a></li>
+                        <li><a href="#consultaCoop">3.3.3 Consultar Cooperativa</a></li>
+                        <li><a href="#filtros">3.3.4 Filtros</a></li>
+                        <li><a href="#informacion">3.3.5 Información</a></li>
+                    </ol>
+                </ol>
+            <li><a href="#problemas">4. Solucion de Problemas</a></li>
+        </ul>
+    </div>
+
+    <div class="objetivo">
+        <h2 id="objetivos">1. Objetivos</h2>
+        <p>
+            En esta sección, vamos a incluir los objetivos que hemos tomado en cuenta para crear esta aplicación.
+        </p>
+        <p>
+            El fin de esta aplicación es que se puedan registrar datos en una base de datos a partir de una interfaz creada por mí. 
+            En esta interfaz se puede añadir, eliminar y actualizar los registros de todas las tablas de la Base de Datos. 
+            En este caso las tablas son Cooperativa, en la que se registran cooperativas con una serie de datos; la tabla Cliente, en la cual se 
+            registran los clientes de dichas cooperativas con una serie de datos y por último la tabla Consultas que es la tabla que nos va a ayudar
+            a poder realizar acciones con los clientes y las cooperativas. 
+        </p>
+        <p>
+            Los objetivos marcados es que todo usuario que quiera utilizarla pueda realizar todas las acciones correctamente y sin mucha dificultad,
+            ya que es una app que puede ser muy útil y puede ser utilizada por muchas personas.
+        </p>
+    </div>
+    <div class="contenido">
+        <h2 id="contenidos">2. Contenidos</h2>
+        <p>La aplicación cuenta con los siguientes contenidos: </p>
+        <p>Cuenta con 3 pestañas: Cooperativa, Cliente y Consultas. Estas son las pestañas donde se van a realizar todas las operaciones.
+            En las pestañas Cooperativa y Cliente las operaciones son las de Añadir, Elimiar y Actualizar tanto clientes como cooperativas,
+            dependiendo de la pestaña en la que estés. En la pestaña Consultas nos encontramos con dos tablas y varios botones.
+            El botón agregarkg sirve para que un cliente pueda añadir kg a una cooperativa. En el botón Consultar Cliente, se pide un 
+            idCliente al pulsarlo y , en las tablas de la izquierda, se muestra la información de dicho cliente junto al nº de kg  en una tabla
+            que ha ido añadiendo a las distintas cooperativas y en la otra, la información de las distintas cooperativas con las que a interactuado.
+        </p>
+        <p>
+            Esta app está más destinada hacia personas que trabajen en el sector agrícola que quieran ir guardando los datos de la gente 
+            que trabaja también en este sector o para gente que solo se dedique a registrar estos datos.
+        </p>
+    </div>
+
+    <div class="funcionamiento">
+        <h2 id="funcionamientos">3. Funcionamiento</h2>
+        <h2 id="pestaniaCoop">3.1 Pestaña Cooperativa</h2>
+        <p>A continuación vamos a ver como se pueden realizar las distintas funciones que se pueden realizar dentro de la app:</p>
+        <h4 id="aniadirCoop">3.1.1 Añadir Cooperativa</h4>
+        <img src="BotonAniadir.png" width="70%" height="40%">
+        <p>Este es el botón que se utiliza para añadir cooperativas a la base de datos. Para poder realizar esto debemos introducir 
+            información de la cooperativa en el formulario que hay a la izquierda del botón, en concreto la ciudad, el nombre y el horario.
+            Los campos idCooperativa y kgTotales no se rellenan ya que idCooperativa es un campo que se genera solo y kgTotales es un campo
+            que por defecto su valor es 0.0.
+        </p>
+        <p>
+            Si ha introducido los valores correctamente saltaría la siguiente ventana: 
+        </p>
+        <img src="BotonAniadir2.png" width="70%" height="40%">
+        <p>
+            Podemos ver también, en la fila rodeada de verde, que al añadir una cooperativa automáticamente se muestra en la tabla.
+        </p>
+        <h4 id="borrarCoop">3.1.2 Eliminar Cooperativa</h4>
+        <img src="EliminarCoop.png" width="70%" height="40%">
+        <p>Este es el botón que se utiliza para eliminar cooperativas de la base de datos. Para ello, la forma mas fácil de hacerlo es 
+            pulsando en la tabla sobre la cooperativa que deseas eliminar ya que se rellena su información automáticamente en el formulario: 
+        </p>
+        <img src="eliminarCoop2.png" width="70%" height="40%">
+        <p>Una vez seleccionada la cooperativa, se pulsa el botón y desaparece de la tabla y de la base de datos. Si la acción se realiza correctamente
+            aparecerá una ventana indicándolo.
+        </p>
+        <img src="eliminarCoop3.png" width="70%" height="40%">
+
+        <h4 id="actuCoop">3.1.3 Actualizar Cooperativa</h4>
+        <img src="ActCoop.png" width="70%" height="40%">
+        <p>
+            Este es el botón que se utiliza para actualizar datos de las cooperativas. La manera de hacer esto es pulsando sobre la 
+            cooperativa que deseas actualizar, para que se rellenen sus datos en el formulario y ahí, modificar los datos que necesites. 
+        </p>
+        <img src="actCoop2.png" width="70%" height="40%">
+        <p>
+            En este caso hemos seleccionado la cooperativa con id 26 y le hemos modificado los datos, si todo es correcto al pulsar el botón
+            aparecerá el siguiente mensaje: 
+        </p>
+        <img src="actCoop3.png" width="70%" height="40%">
+
+        <h4 id="informe">3.1.4 Informe</h4>
+        <p>En esta pestaña, se encuentra un botón llamado "+info", en el que, al pulsarlo, aparece un pequeño informe con los datos de 
+            las cooperativas y un pequeño gráfico en el que se muestra cual tiene más kgTotales
+        </p>
+        <img src="informe.png" width="70%" height="40%">
+        <img src="informe2.png" width="70%" height="40%">
+        <img src="informe3.png">
+
+        <h2 id="pestañaCliente">3.2 Pestaña Cliente</h2>
+        <h4 id="aniadirClient">3.2.1 Añadir Cliente</h4>
+        <img src="aniadirCliente.png" width="70%" height="40%">
+        <p>Este es el botón que se utiliza para añadir clientes a la base de datos. La forma correcta de hacerlo es añadiendo información 
+            sobre el cliente en el formulario de la izquierda. Es necesario completar todos los campos excepto el campo idCliente, ya que es un campo
+            que se rellena automáticamente. Una vez ya completado el formulario, se pulsa el botón, y si los datos son correctos salta el siguiente
+            mensaje:
+        </p>
+        <img src="aniadirCliente2.png" width="70%" height="40%">
+        <p>
+            Abajo, rodeado de verde, podemos ver el cliente que ha sido añadido
+        </p>
+
+        <h4 id="borrarClient">3.2.2 Eliminar Cliente</h4>
+        <img src="eliminarCliente.png" width="70%" height="40%">
+        <p>
+            Este es el botón que se utiliza para poder eliminar clientes de la base de datos. La forma correcta de hacer esto es pulsando 
+            sobre el cliente que deseamos eliminar ya que haciendo esto, el formulario se autocompleta con la infromación del cliente
+        </p>
+        <img src="eliminarCliente2.png" width="70%" height="40%">
+        <p>
+            Una vez hecho esto, se pulsa el botón de eliminar y, si todo está correcto, debería salir un mensaje confirmando la acción y el 
+            cliente desaparecería automáticamente de la tabla.
+        </p>
+        <img src="eliminarCliente3.png" width="70%" height="40%">
+
+        <h4 id="actCliente">3.2.3 Actualizar Cliente</h4>
+        <img src="ActCliente.png" width="70%" height="40%">
+        <p>
+            Este es el botón que se utiliza para actualizar los datos de un cliente. La forma correcta de hacer esto es pulsando sobre 
+            el cliente que deseas actualizar y a continuación, cambiar los datos que desees. 
+        </p>
+        <img src="actCliente2.png" width="70%" height="40%">
+        <p>
+            Una vez hecho esto, si los datos son correctos,le aparecerá un mensaje confirmando la operación.
+        </p>
+        <img src="ActCliente3.png" width="70%" height="40%">
+
+        <h2 id="PestaniaConsulta">3.3 Pestaña Consultas</h2>
+        <h4 id="agregarKg">3.3.1 Agregarkg</h4>
+        <img src="agregarkg.png" width="70%" height="40%">
+        <p>
+            Para poder agregarKg a una cooperativa, se debe pulsar el botón marcado en la imagen. Una vez pulsado, se mostrará
+            un pequeño formulario en el que se pide id del cliente que va a añadir los kg, id de la cooperativa a la que van a ser añadidos 
+            los kg y por último la cantidad de kg a añadir.
+        </p>
+        <img src="agregarKg2.png">
+        <p>
+            Cunado se rellena el formulario, primero se comprueba que los id introducidos existan dentro de la Base de Datos, en caso contrario 
+            se mostrará un mensaje de error. Si todo está correcto se mostraría un mensaje confirmando la operación: 
+        </p>
+        <img src="agregarKg3.png" width="70%" height="40%">
+        <h4 id="consultarCliente">3.3.2 Consultar Cliente</h4>
+        <img src="consultClient.png" width="70%" height="40%">
+        <p>
+            Para poder consultar cuantos kg ha cargado un cliente y además ver las cooperativas a los que los ha llevado, se pulsa en
+            en botón que se indica en la imagen anterior. Al pulsar el botón se muestra un formulario que pide la id del cliente que deseas 
+            consultar.
+        </p>
+        <img src="ConsultClient2.png">
+        <p>
+            Una vez introducido el id, se pulsa en "Enviar" y si el id existe en la Base de Dtaos, se muestra la información en las
+            tablas de la derecha: 
+        </p>
+        <img src="ConsultClient3.png" width="70%" height="40%">
+
+        <h4 id="consultaCoop">3.3.3 Consultar Cooperativa</h4>
+        <img src="ConsultCoop.png" width="70%" height="40%">
+        <p>
+            Para poder consultar la infomación de las cooperativas junto a los clientes que les han llevado kg se pulsa en el botón 
+            indicado en la imagen. Una vez se pulse, salta un pequeño formulario que pide la id de la cooperativa a consultar: 
+        </p>
+        <img src="ConsultCoop2.png">
+        <p>
+            Una vez introducido el id se comprueba que exista en la Base de Datos y si existe, se muestra la información en las tablas de la 
+            derecha: 
+        </p>
+        <img src="consultaCoop3.png" width="70%" height="40%">
+
+        <h4 id="filtros">3.3.4 Filtros</h4>
+        <p>
+            En la pestaña Consultas, hay un botón llamado Filtros que al pulsarlo abre un formulario que pide kgTotales maximos y kgTotales minimos.
+            Esto lo que hace es que muestra en un informe las cooperativas en las que sus kgTotales están dentro de ese rango.
+        </p>
+        <img src="filtros.png">
+        <img src="filtros2.png" width="70%" height="40%"> 
+
+        <h4 id="informacion">3.3.5 Información</h4>
+        <p>
+            En esta pestaña, también hay un botón llamado Información que, al pulsarlo, muestra un informe con información relacionada con los clientes,
+            las cooperativas y los kg añadidos.
+        </p>
+        <img src="info.png" width="70%" height="40%">
+
+        <h2 id="problemas">4. Solución de problemas</h2>
+        <p>En esta parte vamos a hablar sobre algunos problemas que deberías de tener en cuenta a la hora de utilizar la aplicación:</p>
+        <p>
+            - En la pestaña Cliente, debe tener en cuenta que el campo DNI solo admite 9 caracteres, es decir, si introduces más de 9
+            solo se cogerán los 9 primeros.
+        </p>
+        <p>
+            - En la pestaña Cooperativa, el horario debes introducirlo tu mismo con el formato que se ve en los demás registros, ya que no
+            está establecido para que se solo se pueda poner así.
+        </p>
+
+
+    </div>
+
+
+</body>
+</html>

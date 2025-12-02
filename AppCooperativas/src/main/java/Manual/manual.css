@@ -1,0 +1,38 @@
+.portada{
+    text-align: center;
+    padding-top: 2%;
+}
+.indice{
+    font-size: 120%;
+    padding-left: 10%;
+    padding-top: 5%;
+}
+.indice li{
+    list-style-type: none;
+    padding: 0.2%;
+}
+.indice a{
+    text-decoration: none;
+    color: black;
+}
+.indice a:active {
+    color: black;
+  }
+.objetivo{
+    padding: 5%;
+}
+.objetivo p{
+    font-size: 120%;
+}
+.contenido{
+    padding: 5%;
+}
+.contenido p{
+    font-size: 120%;
+}
+.funcionamiento{
+    padding: 5%;
+}
+.funcionamiento p{
+    font-size: 120%;
+}
