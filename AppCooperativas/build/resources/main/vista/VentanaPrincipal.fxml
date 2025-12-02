@@ -32,7 +32,7 @@
                   <Label fx:id="nombreCoopform" layoutX="139.0" layoutY="131.0" text="Nombre" />
                   <TextField fx:id="nombreCooptxt" layoutX="136.0" layoutY="149.0" />
                   <Label fx:id="horarioCoopform" layoutX="139.0" layoutY="183.0" text="Horario(L-D)" />
-                  <TextField fx:id="horariotxt" layoutX="136.0" layoutY="200.0" promptText="00:00 - 00:00"  />
+                  <TextField fx:id="horariotxt" layoutX="136.0" layoutY="200.0" promptText="00:00 - 00:00" />
                   <Label fx:id="KgTotalCoopform" layoutX="139.0" layoutY="233.0" text="Kg totales" />
                   <TextField fx:id="KgTotaltxt" editable="false" layoutX="136.0" layoutY="252.0" />
                   <Button fx:id="eliminarCoop" ellipsisString="-" layoutX="633.0" layoutY="68.0" mnemonicParsing="false" onAction="#eliminarCoop" prefHeight="100.0" prefWidth="94.0" style="-fx-background-color: red;" text="-">
