@@ -1,133 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bdc261b2-1cd0-4f90-b458-a439e562eaf2">
-	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
-	<queryString>
-		<![CDATA[SELECT cl.idCliente, cl.nombre AS nombre_cliente, cl.apellido, cl.dni, cl.telefono,
-       co.idCooperativa, co.ciudad, co.nombre AS nombre_cooperativa, co.horario, co.kgtotales,
-       con.kg
-FROM Cliente cl
-JOIN Consultas con ON cl.idCliente = con.idCliente
-JOIN Cooperativa co ON con.idCooperativa = co.idCooperativa;]]>
-	</queryString>
-	<field name="idCliente" class="java.lang.Integer">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="nombre_cliente" class="java.lang.String"/>
-	<field name="apellido" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="dni" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="telefono" class="java.lang.Integer">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="idCooperativa" class="java.lang.Integer">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="ciudad" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="nombre_cooperativa" class="java.lang.String"/>
-	<field name="horario" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="kgtotales" class="java.math.BigDecimal">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="kg" class="java.math.BigDecimal">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<background>
-		<band splitType="Stretch"/>
-	</background>
-	<title>
-		<band height="79" splitType="Stretch">
-			<staticText>
-				<reportElement x="0" y="0" width="555" height="79" uuid="69715788-0d1c-47c9-8a1c-f9b7c51ca276"/>
-				<textElement>
-					<font size="24" isBold="true"/>
-				</textElement>
-				<text><![CDATA[AppCooperativa]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="208" y="39" width="126" height="20" uuid="785a0ba5-e975-4710-a234-cf0b23c3ab25"/>
-				<textElement>
-					<font size="14"/>
-				</textElement>
-				<text><![CDATA[Listado información]]></text>
-			</staticText>
-			<image>
-				<reportElement x="434" y="11" width="100" height="68" uuid="12c512ad-0c99-4d5d-9a8f-b80373cbcc5a"/>
-				<imageExpression><![CDATA["C:\\Users\\anton\\Downloads\\crud_javafx_libros_v2\\AppCooperativas\\src\\main\\java\\TrabajoNuevo\\CoopImgJpg.jpg"]]></imageExpression>
-			</image>
-		</band>
-	</title>
-	<pageHeader>
-		<band height="35" splitType="Stretch"/>
-	</pageHeader>
-	<columnHeader>
-		<band height="61" splitType="Stretch">
-			<staticText>
-				<reportElement x="34" y="2" width="100" height="20" uuid="8669f306-5858-4024-80b2-c6ae635ceaaf"/>
-				<text><![CDATA[idCliente]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="134" y="2" width="100" height="20" uuid="b602ed67-42d3-4ebe-8078-a7ced7e2ca79"/>
-				<text><![CDATA[nombre_cliente]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="234" y="2" width="100" height="20" uuid="965530c9-6b3d-44fb-b065-abfdd6684905"/>
-				<text><![CDATA[idCooperativa]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="334" y="2" width="100" height="20" uuid="db65623f-7842-4bd7-9603-f3ed1578066a"/>
-				<text><![CDATA[nombre_cooperativa]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="434" y="2" width="100" height="20" uuid="baa6797d-2b94-40be-ba79-3203281a9a26"/>
-				<text><![CDATA[kg]]></text>
-			</staticText>
-		</band>
-	</columnHeader>
-	<detail>
-		<band height="125" splitType="Stretch">
-			<textField>
-				<reportElement x="34" y="0" width="100" height="20" uuid="58a9fd9e-d132-4de2-af23-51479341c42e"/>
-				<textFieldExpression><![CDATA[$F{idCliente}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="134" y="0" width="100" height="20" uuid="1883d95b-9426-4744-b70a-1b69ae791a3b"/>
-				<textFieldExpression><![CDATA[$F{nombre_cliente}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="234" y="0" width="100" height="20" uuid="8090b40c-4bb1-4081-8c53-c3f701e2373f"/>
-				<textFieldExpression><![CDATA[$F{idCooperativa}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="334" y="0" width="100" height="20" uuid="199c75f5-d836-4016-a87c-9d994d595f0d"/>
-				<textFieldExpression><![CDATA[$F{nombre_cooperativa}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="434" y="0" width="100" height="20" uuid="cb51b270-1491-486a-b139-82b52f98f9ef"/>
-				<textFieldExpression><![CDATA[$F{kg}]]></textFieldExpression>
-			</textField>
-		</band>
-	</detail>
-	<columnFooter>
-		<band height="45" splitType="Stretch"/>
-	</columnFooter>
-	<pageFooter>
-		<band height="54" splitType="Stretch">
-			<textField>
-				<reportElement x="455" y="34" width="100" height="20" uuid="53704305-87bf-4bbd-bbe8-057b8c7f9d50"/>
-				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
-			</textField>
-		</band>
-	</pageFooter>
-	<summary>
-		<band height="42" splitType="Stretch"/>
-	</summary>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports 
+                                  http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" 
+              name="informe_clientes_cooperativas" language="java" pageWidth="595" pageHeight="842" 
+              columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" 
+              uuid="bdc261b2-1cd0-4f90-b458-a439e562eaf2">
+
+    <property name="ireport.zoom" value="1.0"/>
+    <property name="ireport.x" value="0"/>
+    <property name="ireport.y" value="0"/>
+
+    <queryString>
+        <![CDATA[
+            SELECT 
+                c.idCliente,
+                c.nombre AS nombre_cliente,
+                co.idCooperativa,
+                co.Nombre AS nombre_cooperativa,
+                con.kg
+            FROM consultas con
+            INNER JOIN cliente c ON con.idCliente = c.idCliente
+            INNER JOIN cooperativa co ON con.idCooperativa = co.idCooperativa
+            ORDER BY c.idCliente, co.idCooperativa
+        ]]>
+    </queryString>
+
+    <field name="idCliente" class="java.lang.Integer"/>
+    <field name="nombre_cliente" class="java.lang.String"/>
+    <field name="idCooperativa" class="java.lang.Integer"/>
+    <field name="nombre_cooperativa" class="java.lang.String"/>
+    <field name="kg" class="java.math.BigDecimal"/>
+
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+
+    <title>
+        <band height="79" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="0" width="555" height="79" uuid="69715788-0d1c-47c9-8a1c-f9b7c51ca276"/>
+                <textElement>
+                    <font size="24" isBold="true"/>
+                </textElement>
+                <text><![CDATA[AppCooperativa]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="208" y="39" width="126" height="20" uuid="785a0ba5-e975-4710-a234-cf0b23c3ab25"/>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <text><![CDATA[Listado información]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <pageHeader>
+        <band height="35" splitType="Stretch"/>
+    </pageHeader>
+
+    <columnHeader>
+        <band height="61" splitType="Stretch">
+            <staticText>
+                <reportElement x="34" y="2" width="100" height="20" uuid="8669f306-5858-4024-80b2-c6ae635ceaaf"/>
+                <textElement/>
+                <text><![CDATA[idCliente]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="134" y="2" width="100" height="20" uuid="b602ed67-42d3-4ebe-8078-a7ced7e2ca79"/>
+                <textElement/>
+                <text><![CDATA[nombre_cliente]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="234" y="2" width="100" height="20" uuid="965530c9-6b3d-44fb-b065-abfdd6684905"/>
+                <textElement/>
+                <text><![CDATA[idCooperativa]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="334" y="2" width="100" height="20" uuid="db65623f-7842-4bd7-9603-f3ed1578066a"/>
+                <textElement/>
+                <text><![CDATA[nombre_cooperativa]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="434" y="2" width="100" height="20" uuid="baa6797d-2b94-40be-ba79-3203281a9a26"/>
+                <textElement/>
+                <text><![CDATA[kg]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="20" splitType="Stretch">
+            <textField>
+                <reportElement x="34" y="0" width="100" height="20" uuid="58a9fd9e-d132-4de2-af23-51479341c42e"/>
+                <textFieldExpression><![CDATA[$F{idCliente}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="134" y="0" width="100" height="20" uuid="1883d95b-9426-4744-b70a-1b69ae791a3b"/>
+                <textFieldExpression><![CDATA[$F{nombre_cliente}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="234" y="0" width="100" height="20" uuid="8090b40c-4bb1-4081-8c53-c3f701e2373f"/>
+                <textFieldExpression><![CDATA[$F{idCooperativa}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="334" y="0" width="100" height="20" uuid="199c75f5-d836-4016-a87c-9d994d595f0d"/>
+                <textFieldExpression><![CDATA[$F{nombre_cooperativa}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="434" y="0" width="100" height="20" uuid="cb51b270-1491-486a-b139-82b52f98f9ef"/>
+                <textFieldExpression><![CDATA[$F{kg}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+    <columnFooter>
+        <band height="45" splitType="Stretch"/>
+    </columnFooter>
+
+    <pageFooter>
+        <band height="54" splitType="Stretch">
+            <textField>
+                <reportElement x="455" y="34" width="100" height="20" uuid="53704305-87bf-4bbd-bbe8-057b8c7f9d50"/>
+                <textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
 </jasperReport>

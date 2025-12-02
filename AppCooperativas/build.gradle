@@ -30,7 +30,7 @@ dependencies {
     implementation 'com.google.guava:guava:31.0.1-jre'
 //JasperReports
     implementation 'com.lowagie:itext:2.1.7'
-    implementation 'net.sf.jasperreports:jasperreports:6.18.0'
+     implementation 'net.sf.jasperreports:jasperreports:6.20.0'
 
     // Otros componentes necesarios para JasperReports
 	implementation 'org.apache.groovy:groovy:4.0.15'
@@ -39,9 +39,7 @@ dependencies {
     //MYSQL
     //Si queremos que funcione con MYSQL, 1) descomentamos la implementation, 2) creamos el contenedor
     //LAMP exponiendo el 3306 y 3) Cambiamos la cadena de conexión en ControladorLibro
-    //implementation 'mysql:mysql-connector-java:8.0.32'
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'mysql:mysql-connector-java:8.0.32'
 
     //MARIADB
     implementation 'org.mariadb.jdbc:mariadb-java-client:3.1.2'

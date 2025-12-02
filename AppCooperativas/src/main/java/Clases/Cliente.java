@@ -4,69 +4,45 @@
  */
 package Clases;
 
-import java.util.Objects;
-
 /**
  *
  * @author anton
  */
 public class Cliente {
     private final int idCliente;
-    private final String nombre;
-    private final String apellido;
-    private final String dni;
-    private final int telefono;
-
-    public Cliente(int id, String nombre, String apellido, String dni, int telefono){
+    private final String Nombre;
+    private final String Apellido;
+    private final String DNI;
+    private final int Telefono;
+    
+    public Cliente(int id, String Nombre, String Apellido, String DNI, int Telefono){
+    
         this.idCliente = id;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.dni = dni;
-        this.telefono = telefono;
-    }
-    public Cliente(String Nombre, String Apellido, String DNI, int Telefono){
-        this.idCliente = 0;
-        this.nombre = Nombre;
-        this.apellido = Apellido;
-        this.dni = DNI;
-        this.telefono = Telefono;
+        this.Nombre = Nombre;
+        this.Apellido = Apellido;
+        this.DNI = DNI;
+        this.Telefono = Telefono;
     }
 
     public int getIdCliente() {
         return idCliente;
     }
 
-    public String getDni() {
-        return dni;
-    }
-
     public String getNombre() {
-        return nombre;
+        return Nombre;
     }
 
     public String getApellido() {
-        return apellido;
+        return Apellido;
     }
 
     public String getDNI() {
-        return dni;
+        return DNI;
     }
 
     public int getTelefono() {
-        return telefono;
+        return Telefono;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Cliente cliente = (Cliente) o;
-        return idCliente == cliente.idCliente;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(idCliente);
-    }
+    
 }
 

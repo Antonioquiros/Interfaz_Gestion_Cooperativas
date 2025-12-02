@@ -40,10 +40,6 @@
 				</textElement>
 				<text><![CDATA[Listado de Cooperativas]]></text>
 			</staticText>
-			<image>
-				<reportElement x="422" y="11" width="115" height="68" uuid="ab8ac95e-7347-42b5-b57b-f035b88dfd54"/>
-				<imageExpression><![CDATA["C:\\Users\\anton\\OneDrive\\Imágenes\\CoopImgJpg.jpg"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 	<pageHeader>

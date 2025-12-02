@@ -8,8 +8,8 @@
 	<queryString>
     <![CDATA[
         SELECT *
-        FROM Cooperativa
-        WHERE kgtotales BETWEEN $P{minimo} AND $P{maximo}
+        FROM cooperativa
+        WHERE KgTotales BETWEEN $P{minimo} AND $P{maximo}
     ]]>
 </queryString>
 
@@ -47,10 +47,6 @@
 				</textElement>
 				<text><![CDATA[Lista filtros]]></text>
 			</staticText>
-			<image>
-				<reportElement x="430" y="12" width="108" height="67" uuid="8ec81f31-3502-462b-86df-2a3b3fe84d0e"/>
-				<imageExpression><![CDATA["C:\\Users\\anton\\Downloads\\crud_javafx_libros_v2\\AppCooperativas\\src\\main\\java\\TrabajoNuevo\\CoopImgJpg.jpg"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 	<pageHeader>
